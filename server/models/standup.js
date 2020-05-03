@@ -1,4 +1,4 @@
-const mongoose = required('mongoose')
+const mongoose = require('mongoose')
 
 const standupSchema = new mongoose.Schema({
     teamMember: { type: String },
@@ -8,3 +8,5 @@ const standupSchema = new mongoose.Schema({
     impediment: { type: String },
     createdOn: { type: Date, default: Date.now }
 })
+
+module.exports = mongoose.model('StandUp', standupSchema)
