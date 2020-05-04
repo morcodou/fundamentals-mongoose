@@ -26,7 +26,8 @@ app.use(function (req, res) {
 // Add MongoDB connection in later... first just run app.listen (below)
 const mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost:27017/virtualstandups', {
-	useNewUrlParser: true
+	useNewUrlParser: true,
+	useUnifiedTopology: true 
 })
 
 const db = mongoose.connection
